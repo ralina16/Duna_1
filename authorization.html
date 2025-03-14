@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/image/logo/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+  <!-- header start -->
+  <div class="header container">
+    <a href="#"><img src="assets/image/logo/favicon.svg" alt=""></a>
+  </div>
+  <!-- header end -->
+
+  <!-- form start -->
+  <div class="autho-form container">
+    <div class="left-block">
+      <h3>Войти</h3>
+      <div class="autho-buttons">
+        <a href="#"><img src="assets/image/authorization/button-1.svg" alt=""></a>
+        <a href="#"><img src="assets/image/authorization/button-2.svg" alt=""></a>
+      </div>
+      <p>ИЛИ</p>
+      <div class="form-container">
+        <form class="form-auth">
+          <div class="input-container">
+            <label>Введите email</label>
+            <input type="email" required>
+          </div>
+
+          <div class="password-field">
+            <label>Введите пароль</label>
+            <input type="password" required>
+            <img src="assets/image/authorization/eye.svg" class="toggle-password" alt="" onclick="togglePassword(this)">
+          </div>
+
+          <button type="submit" class="auth-btn">ВОЙТИ</button>
+        </form>
+
+        <script>
+          function validateForm() {
+            const inputs = document.querySelectorAll('.form-auth input');
+            let valid = true;
+
+            inputs.forEach(input => {
+              if (!input.checkValidity()) {
+                valid = false;
+                input.reportValidity();
+              }
+            });
+
+            if (valid) {
+              window.location.href = 'URL_вашей_страницы.html';
+            }
+
+            return false;
+          }
+
+          function togglePassword(element) {
+            const passwordField = element.previousElementSibling;
+            if (passwordField.type === 'password') {
+              passwordField.type = 'text';
+              element.src = 'assets/image/authorization/eye.svg';
+            } else {
+              passwordField.type = 'password';
+              element.src = 'assets/image/authorization/eye_1.svg';
+            }
+          }
+        </script>
+
+
+        <div class="register">
+          У Вас еще нет аккаунта? <a href="registration.html">Зарегистрироваться</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="right-block">
+      <img src="assets/image/authorization/background.jpg" alt="" class="img">
+      <img src="assets/image/authorization/1.svg" alt="" class="img-1">
+
+      <div class="auth-text">
+        <h3>Находите еду с любовью</h3>
+        <p>Дюна — это сервис доставки еды, в которой представлено более 2 тысяч блюд, включая азиатские, китайские,
+          итальянские и многие другие. Наша панель управления поможет вам управлять заказами и деньгами.</p>
+      </div>
+    </div>
+  </div>
+  <!-- form end -->
+</body>
+
+</html>
