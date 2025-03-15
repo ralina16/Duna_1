@@ -13,10 +13,18 @@
     <a href="#" class="btn-to-top"><img src="assets/image/header/vector.svg" alt=""></a>
     <!-- header start -->
     <div class="header container">
-
         <div class="header-logo">
             <a href="#"><img src="assets/image/logo/logo.svg" alt=""></a>
         </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            <img src="assets/image/header/burger-menu.svg" alt="Меню">
+        </label>
+        <label for="menu-toggle" class="close-icon">
+            <img src="assets/image/header/close.svg" alt="Закрыть" class="close">
+        </label>
 
         <div class="header-block">
             <nav>
@@ -24,7 +32,6 @@
                 <a href="#catalog">Каталог</a>
                 <a href="#reviews">Отзывы</a>
             </nav>
-
             <a href="authorization.html" class="header-btn">Войти</a>
         </div>
     </div>
@@ -308,7 +315,7 @@
     <!-- advantages end -->
 
     <!-- discount start-->
-    <div class="discount container">
+    <div class="discount container my-140">
         <div class="discount-left">
             <h3>Скидка 10%</h3>
             <p>Введите свой email и станьте частью нашей гастрономической семьи! В качестве благодарности за вашу
@@ -328,7 +335,7 @@
     <!-- discount end -->
 
     <!-- reviews start -->
-    <div class="reviews container" id="reviews">
+    <div class="reviews container my-140" id="reviews">
         <div class="title">
             <span>ОТЗЫВЫ</span>
             <h3>Довольные клиенты</h3>
@@ -382,9 +389,9 @@
         </div>
 
         <div class="slider-nav">
-            <label for="slide1"></label>
-            <label for="slide2"></label>
-            <label for="slide3"></label>
+            <label for="slide1" class="active"></label>
+            <label for="slide2" class="passive"></label>
+            <label for="slide3" class="passive"></label>
         </div>
     </div>
     </div>
